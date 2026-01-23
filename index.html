@@ -157,58 +157,6 @@
 </div>
 </div>
 </section>
-<style>
-/* ===== PORTFOLIO FIXES ===== */
-#work .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 4rem;
-  align-items: start;
-}
-
-#work .portfolio-item {
-  cursor: crosshair;
-}
-
-#work .image-box {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 6px;
-  background: #f3f4f6;
-}
-
-#work .image-box.wide {
-  aspect-ratio: 16 / 10;
-}
-
-#work .image-box.tall {
-  aspect-ratio: 4 / 5;
-}
-
-#work .image-bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.7s ease;
-}
-
-#work .portfolio-item:hover .image-bg {
-  transform: scale(1.06);
-}
-
-#work .meta {
-  margin-top: 1.5rem;
-}
-
-@media (max-width: 1024px) {
-  #work .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-
 <section class="py-32 bg-white text-black" id="work">
   <div class="max-w-[1600px] mx-auto px-8 lg:px-20">
 
@@ -225,68 +173,29 @@
       </div>
     </div>
 
-    <!-- PORTFOLIO GRID -->
-    <div class="portfolio-grid">
+    <!-- CENTER SLIDE IMAGE -->
+    <div class="flex flex-col items-center text-center">
 
-      <!-- AUTO PATTERN: wide → tall → tall → wide -->
-      
-      <!-- 1 -->
-      <div class="portfolio-item" style="grid-column: span 7;">
-        <div class="image-box wide"><div class="image-bg" style="background-image:url('/1.jpg')"></div></div>
-        <div class="meta"><span class="text-[10px] uppercase tracking-widest opacity-50">01 / Branding</span><h4 class="text-3xl font-display font-bold uppercase tracking-tighter">Project One</h4></div>
+      <div class="w-full max-w-5xl aspect-[16/9] bg-gray-100 overflow-hidden rounded-xl shadow-lg">
+        <div
+          class="w-full h-full bg-cover bg-center"
+          style="background-image: url('/1.jpg');">
+        </div>
       </div>
 
-      <!-- 2 -->
-      <div class="portfolio-item" style="grid-column: span 5; margin-top:6rem;">
-        <div class="image-box tall"><div class="image-bg" style="background-image:url('/2.jpg')"></div></div>
-        <div class="meta"><span class="text-[10px] uppercase tracking-widest opacity-50">02 / Digital</span><h4 class="text-3xl font-display font-bold uppercase tracking-tighter">Project Two</h4></div>
-      </div>
-
-      <!-- 3 -->
-      <div class="portfolio-item" style="grid-column: span 5;">
-        <div class="image-box tall"><div class="image-bg" style="background-image:url('/3.jpg')"></div></div>
-        <div class="meta"><span class="text-[10px] uppercase tracking-widest opacity-50">03 / Creative</span><h4 class="text-3xl font-display font-bold uppercase tracking-tighter">Project Three</h4></div>
-      </div>
-
-      <!-- 4 -->
-      <div class="portfolio-item" style="grid-column: span 7;">
-        <div class="image-box wide"><div class="image-bg" style="background-image:url('/4.jpg')"></div></div>
-        <div class="meta"><span class="text-[10px] uppercase tracking-widest opacity-50">04 / UI UX</span><h4 class="text-3xl font-display font-bold uppercase tracking-tighter">Project Four</h4></div>
-      </div>
-
-      <!-- 5–24 -->
-      <!-- Pattern repeats automatically for visual balance -->
-
-      <!-- 5 -->
-      <div class="portfolio-item" style="grid-column: span 7;"><div class="image-box wide"><div class="image-bg" style="background-image:url('/5.jpg')"></div></div><div class="meta"><span class="text-[10px] uppercase tracking-widest opacity-50">05</span><h4 class="text-3xl font-display font-bold uppercase tracking-tighter">Project Five</h4></div></div>
-
-      <!-- 6 -->
-      <div class="portfolio-item" style="grid-column: span 5;"><div class="image-box tall"><div class="image-bg" style="background-image:url('/6.jpg')"></div></div><div class="meta"><span class="text-[10px] uppercase tracking-widest opacity-50">06</span><h4 class="text-3xl font-display font-bold uppercase tracking-tighter">Project Six</h4></div></div>
-
-      <!-- 7 -->
-      <div class="portfolio-item" style="grid-column: span 5;"><div class="image-box tall"><div class="image-bg" style="background-image:url('/7.jpg')"></div></div><div class="meta"><span class="text-[10px] uppercase tracking-widest opacity-50">07</span><h4 class="text-3xl font-display font-bold uppercase tracking-tighter">Project Seven</h4></div></div>
-
-      <!-- 8 -->
-      <div class="portfolio-item" style="grid-column: span 7;"><div class="image-box wide"><div class="image-bg" style="background-image:url('/8.jpg')"></div></div><div class="meta"><span class="text-[10px] uppercase tracking-widest opacity-50">08</span><h4 class="text-3xl font-display font-bold uppercase tracking-tighter">Project Eight</h4></div></div>
-
-      <!-- 9–24 continue same pattern -->
-      <!-- Just change image numbers if needed -->
-
-      <!-- 9 -->
-
-
-      <!-- 10 -->
-      <div class="portfolio-item" style="grid-column: span 5;"><div class="image-box tall"><div class="image-bg" style="background-image:url('/10.jpg')"></div></div><div class="meta"><span class="text-[10px] uppercase tracking-widest opacity-50">09</span><h4 class="text-3xl font-display font-bold uppercase tracking-tighter">Project Nine</h4></div></div>
-
-      <!-- 11 -->
-      <div class="portfolio-item" style="grid-column: span 5;"><div class="image-box tall"><div class="image-bg" style="background-image:url('/11.jpg')"></div></div><div class="meta"><span class="text-[10px] uppercase tracking-widest opacity-50">10</span><h4 class="text-3xl font-display font-bold uppercase tracking-tighter">Project Ten</h4></div></div>
-
-      <!-- 12 -->
-      <div class="portfolio-item" style="grid-column: span 7;"><div class="image-box wide"><div class="image-bg" style="background-image:url('/12.jpg')"></div></div><div class="meta"><span class="text-[10px] uppercase tracking-widest opacity-50">11</span><h4 class="text-3xl font-display font-bold uppercase tracking-tighter">Project Eleven</h4></div></div>
-
-     
+      <!-- DOWNLOAD BUTTON -->
+      <a
+        href="/Portfolio.pdf"
+        class="mt-12 inline-flex items-center justify-center
+               px-12 py-4 rounded-full
+               bg-black text-white
+               font-bold uppercase tracking-widest text-sm
+               hover:bg-black/80 transition">
+        Download Portfolio
+      </a>
 
     </div>
+
   </div>
 </section>
 
